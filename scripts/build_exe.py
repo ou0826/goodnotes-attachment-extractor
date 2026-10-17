@@ -34,11 +34,11 @@ def main() -> int:
 
     exe = ROOT / "dist" / f"{NAME}.exe"
     if not exe.exists():
-        print("构建失败：未找到输出文件", file=sys.stderr)
+        print("Build failed: output file not found", file=sys.stderr)
         return 1
 
     size_mb = exe.stat().st_size / 1024 / 1024
-    print(f"构建完成: {exe} ({size_mb:.1f} MB)")
+    print(f"Build complete: {exe} ({size_mb:.1f} MB)")
     return 0
 
 
