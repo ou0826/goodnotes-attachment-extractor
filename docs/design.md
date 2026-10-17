@@ -239,4 +239,4 @@ exe 上传到 GitHub Release。
 
 ## 9. 版本
 
-当前版本 1.0.0，许可证 MIT。变更记录见 [CHANGELOG](../CHANGELOG.md)。
+当前版本 1.0.1，许可证 MIT。变更记录见 [CHANGELOG](../CHANGELOG.md)。

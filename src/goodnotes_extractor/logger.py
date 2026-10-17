@@ -102,7 +102,7 @@ class LogManager:
         self._root_logger.setLevel(log_level)
 
         # 控制台处理器
-        if console_output:
+        if console_output and sys.stdout is not None:
             self._console_handler = logging.StreamHandler(sys.stdout)
             self._console_handler.setLevel(log_level)
             fmt = ColoredFormatter(

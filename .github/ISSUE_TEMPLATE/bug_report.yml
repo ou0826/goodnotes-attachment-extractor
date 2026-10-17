@@ -38,6 +38,7 @@ body:
     attributes:
       label: 使用的版本
       options:
+        - v1.0.1
         - v1.0.0
         - main 分支源码
         - 其他（请在描述中说明）

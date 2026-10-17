@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   build:
-    name: Build Windows executable
+    name: Build Windows executables
     runs-on: windows-latest
 
     steps:
@@ -28,20 +28,21 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -e ".[dev]"
 
-      - name: Build executable
+      - name: Build executables
         run: python scripts/build_exe.py
 
-      - name: Rename artifact
+      - name: Rename artifacts
         shell: pwsh
         run: |
           $tag = "${{ github.ref_name }}"
           Copy-Item "dist/GoodNotes-Attachment-Extractor.exe" "dist/GoodNotes-Attachment-Extractor-$tag-win64.exe"
+          Copy-Item "dist/GoodNotes-Attachment-Extractor-GUI.exe" "dist/GoodNotes-Attachment-Extractor-$tag-win64-GUI.exe"
           Get-ChildItem dist
 
       - name: Publish release
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/GoodNotes-Attachment-Extractor-*-win64.exe
+          files: dist/*win64*.exe
           generate_release_notes: true
           draft: false
           prerelease: false

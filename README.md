@@ -61,8 +61,14 @@ GoodNotes 导出的 <code>.goodnotes</code> 是一个 ZIP 容器，附件在 <co
 ### 方式一：下载可执行文件（推荐，免安装）
 
 1. 打开 [Releases](https://github.com/ou0826/goodnotes-attachment-extractor/releases)；
-2. 下载最新的 <code>GoodNotes-Attachment-Extractor-vX.Y.Z-win64.exe</code>；
-3. 双击运行，或执行 <code>GoodNotes-Attachment-Extractor-vX.Y.Z-win64.exe --gui</code>。
+2. 按用途下载：
+
+| 文件 | 用途 |
+| --- | --- |
+| <code>GoodNotes-Attachment-Extractor-vX.Y.Z-win64-GUI.exe</code> | 图形界面版，**双击直接打开**，无控制台窗口（推荐） |
+| <code>GoodNotes-Attachment-Extractor-vX.Y.Z-win64.exe</code> | 命令行版，适合批量处理和脚本调用 |
+
+3. 命令行版要打开界面时，执行 <code>GoodNotes-Attachment-Extractor-vX.Y.Z-win64.exe --gui</code>。
 
 <details>
 <summary><b>Windows 提示"已保护你的电脑"怎么办？</b></summary>
@@ -112,6 +118,8 @@ python scripts/build_exe.py
 ## 🖥️ 使用
 
 ### 图形界面
+
+Windows 用户可以直接双击下载的 <code>...-win64-GUI.exe</code>；源码安装用户执行：
 
 ~~~bash
 gn-extract-gui

@@ -62,6 +62,7 @@ class GoodNotesExtractorGUI:
 
     def __init__(self):
         self.root = Tk()
+        self._apply_window_icon()
         self.root.title(f"GoodNotes 附件提取器 v{__version__}")
         self.root.geometry("1024x720")
         self.root.configure(bg=COLOR_BG)
@@ -98,6 +99,23 @@ class GoodNotesExtractorGUI:
         x = (sw - w) // 2
         y = (sh - h) // 2
         self.root.geometry(f"+{x}+{y}")
+
+    def _apply_window_icon(self):
+        """设置窗口图标，源码运行和打包后都适用。"""
+        candidates = []
+        base = getattr(sys, "_MEIPASS", None)
+        if base:
+            candidates.append(Path(base) / "assets" / "icon.ico")
+        candidates.append(
+            Path(__file__).resolve().parent.parent.parent / "assets" / "icon.ico"
+        )
+        for icon in candidates:
+            if icon.exists():
+                try:
+                    self.root.iconbitmap(str(icon))
+                    return
+                except Exception:
+                    pass
 
     def _build_ui(self):
         """构建完整的用户界面布局。"""

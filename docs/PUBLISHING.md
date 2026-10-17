@@ -185,12 +185,12 @@ git push -u origin main
 操作：
 
 ```bash
-git tag -a v1.0.0 -m "v1.0.0 首个开源版本"
-git push origin v1.0.0
+git tag -a v1.0.1 -m "v1.0.1 首个开源版本"
+git push origin v1.0.1
 ```
 
 然后打开仓库的 **Actions** 页面查看进度。完成后在 **Releases** 页面就能看到
-`GoodNotes-Attachment-Extractor-v1.0.0-win64.exe`。
+`GoodNotes-Attachment-Extractor-v1.0.1-win64.exe`。
 
 ### 5.2 备用：手动构建并上传
 
@@ -201,13 +201,18 @@ python -m pip install -e ".[dev]"
 python scripts/build_exe.py
 ```
 
-产物在 `dist/GoodNotes-Attachment-Extractor.exe`。在 GitHub 仓库页面：
+产物在 `dist/` 下：
+
+- `GoodNotes-Attachment-Extractor.exe`：命令行版
+- `GoodNotes-Attachment-Extractor-GUI.exe`：图形界面版
+
+在 GitHub 仓库页面：
 
 1. 右侧 **Releases** → **Draft a new release**；
-2. Choose a tag → 输入 `v1.0.0` → Create new tag；
-3. 标题填 `v1.0.0`，说明可以从 `CHANGELOG.md` 复制；
-4. 把 exe 拖进附件区域，建议重命名为
-   `GoodNotes-Attachment-Extractor-v1.0.0-win64.exe`；
+2. Choose a tag → 输入 `v1.0.1` → Create new tag；
+3. 标题填 `v1.0.1`，说明可以从 `CHANGELOG.md` 复制；
+4. 把两个 exe 拖进附件区域，建议重命名为
+   `...-win64.exe` 和 `...-win64-GUI.exe`；
 5. 点击 **Publish release**。
 
 > Release 附件不要提交进 Git 仓库。仓库只保存源码，二进制走 Releases。

@@ -5,7 +5,7 @@ GoodNotes 附件提取器
 本项目是非官方工具，与 GoodNotes 开发者无任何关联。
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __author__ = "Xiangyu"
 __license__ = "MIT"
 

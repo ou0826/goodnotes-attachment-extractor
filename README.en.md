@@ -58,8 +58,14 @@ bytes, parses container metadata, and writes readable filenames.
 ### Download (Windows, no Python required)
 
 1. Open [Releases](https://github.com/ou0826/goodnotes-attachment-extractor/releases);
-2. Download <code>GoodNotes-Attachment-Extractor-vX.Y.Z-win64.exe</code>;
-3. Run it, or execute <code>... --gui</code>.
+2. Download one of:
+
+| File | Purpose |
+| --- | --- |
+| <code>...-win64-GUI.exe</code> | GUI build; double-click to open (recommended) |
+| <code>...-win64.exe</code> | CLI build for scripts and batch jobs |
+
+3. For the CLI build, run <code>... --gui</code> to open the GUI.
 
 ### Install from source
 
