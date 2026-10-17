@@ -1,0 +1,37 @@
+GoodNotes Attachment Extractor (GoodNotes 附件提取器)
+Copyright (c) 2026 Xiangyu
+
+This product is an independent, unofficial third-party tool. It is not
+affiliated with, endorsed by, or sponsored by Time Base Technology Limited,
+the developer of GoodNotes.
+
+Trademarks
+----------
+GoodNotes is a registered trademark of Time Base Technology Limited.
+The name "GoodNotes" is used in this project only to describe the file format
+that the tool is compatible with (nominative fair use). No GoodNotes source
+code, artwork, or other proprietary assets are included in this repository.
+
+Third-party components
+----------------------
+This project is written in Python and uses only the Python standard library
+at runtime. The following third-party components are used for development or
+distribution:
+
+- Python - PSF License Agreement
+  https://docs.python.org/3/license.html
+- Tcl/Tk (tkinter) - Tcl/Tk License (BSD-style)
+  https://www.tcl.tk/software/tcltk/license.html
+- PyInstaller - GPL 2.0 with a special exception that allows building and
+  distributing non-free executables
+  https://github.com/pyinstaller/pyinstaller/blob/develop/COPYING.txt
+- Pillow (optional, image conversion only) - HPND License
+  https://python-pillow.org/
+- FFmpeg (optional, NOT bundled; users install it themselves) - LGPL/GPL
+  depending on the build options chosen by the user
+  https://ffmpeg.org/legal.html
+
+Sample files
+------------
+No .goodnotes files or user note content are included in this repository.
+Only process files that you own or are authorized to access.

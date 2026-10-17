@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# PyInstaller
+*.spec
+*.spec.bak
+*.manifest
+
+# Application output and logs
+*_提取/
+logs/
+*.log
+.goodnotes-extractor/
+
+# User note files must never be committed
+*.goodnotes
+*.goodnotes.zip
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/

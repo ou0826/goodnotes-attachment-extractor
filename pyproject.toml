@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "goodnotes-attachment-extractor"
+version = "1.0.0"
+description = "从 GoodNotes 导出的 .goodnotes 文件中提取音频、图片和 PDF 附件的命令行与图形界面工具。"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Xiangyu", email = "xiangyum6@163.com" }]
+keywords = [
+  "goodnotes",
+  "note-taking",
+  "attachments",
+  "extractor",
+  "protobuf",
+  "mp4",
+  "pdf",
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Environment :: Win32 (MS Windows)",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: Chinese (Simplified)",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Utilities",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "build>=1.2",
+  "pyinstaller>=6.0",
+]
+images = ["Pillow>=10.0"]
+
+[project.scripts]
+gn-extract = "goodnotes_extractor.cli:main"
+gn-extract-gui = "goodnotes_extractor.gui:main"
+
+[project.urls]
+Homepage = "https://github.com/ou0826/goodnotes-attachment-extractor"
+Repository = "https://github.com/ou0826/goodnotes-attachment-extractor"
+Issues = "https://github.com/ou0826/goodnotes-attachment-extractor/issues"
+Changelog = "https://github.com/ou0826/goodnotes-attachment-extractor/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"

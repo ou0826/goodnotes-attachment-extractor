@@ -1,0 +1,61 @@
+name: Bug 报告
+description: 报告一个可复现的问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！提交前请先搜索现有 Issue。
+        **请勿上传真实的 `.goodnotes` 文件、笔记内容、日志中的个人路径或证件扫描件。**
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 问题描述
+      description: 发生了什么？你期望发生什么？
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 运行 gn-extract ...
+        2. 选择文件 ...
+        3. 出现错误 ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 错误信息 / 日志
+      description: 请先删除个人路径、文件名等信息。
+      render: text
+    validations:
+      required: false
+  - type: dropdown
+    id: version
+    attributes:
+      label: 使用的版本
+      options:
+        - v1.0.0
+        - main 分支源码
+        - 其他（请在描述中说明）
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 运行环境
+      placeholder: "Windows 11 23H2 / Python 3.13 / exe 还是源码运行"
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 确认事项
+      options:
+        - label: 我已搜索现有 Issue，没有重复
+          required: true
+        - label: 我确认内容中不含个人笔记、证件或未脱敏的日志
+          required: true
