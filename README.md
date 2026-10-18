@@ -42,6 +42,20 @@
   </tr>
 </table>
 
+## 🧩 Agent Skill
+
+仓库里附带一个 Agent Skill，可以直接装进 Claude Code、Codex、Cursor：
+
+~~~bash
+npx skills add ou0826/goodnotes-attachment-extractor
+~~~
+
+也可以手动复制 <code>skills/goodnotes-attachment-extractor/</code> 到
+<code>~/.claude/skills/</code>（DSH 用 <code>~/.dsh/skills/</code>）。
+
+装好后直接对代理说"把这个 .goodnotes 里的录音和图片导出来"。
+详见 [skills/README.md](skills/README.md)。
+
 ## 🎯 它解决什么问题
 
 GoodNotes 导出的 <code>.goodnotes</code> 是一个 ZIP 容器，附件在 <code>attachments/</code> 下，
@@ -280,6 +294,7 @@ ffmpeg -i 录音_11m26s.m4a 录音.wav
 │   └── logger.py         日志管理
 ├── tests/                74 个单元测试（unittest / pytest）
 ├── docs/                 使用说明、架构文档、发布指南
+├── skills/               Agent Skill（npx skills add）
 ├── scripts/build_exe.py  PyInstaller 构建脚本
 └── .github/workflows/    CI 与自动发布
 ~~~

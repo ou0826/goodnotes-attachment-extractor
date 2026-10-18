@@ -6,6 +6,11 @@
 
 ## [Unreleased]
 
+### 新增
+
+- 新增 Agent Skill：skills/goodnotes-attachment-extractor，
+  支持 npx skills add 安装，也可手动放入 Claude Code / DSH 技能目录。
+
 ## [1.0.1] - 2026-10-17
 
 ### 新增
